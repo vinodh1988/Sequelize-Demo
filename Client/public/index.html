@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>First HTML page</title>
+        <script src="jquery.min.js"></script>
+        <script src="popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>My first app</h1>
+        <a href="json/people">Show People</a>
+        <form action="json/store" method="post">
+        <div class="jumbotron">
+            <table>
+                <tr>
+                    <th>Sno</th>
+                    <td><input type="text" name="sno"></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                     <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td><input type="text" name="city"></td>
+               </tr>
+               <tr>
+                  
+                    <td colspan=2 align=center><input type="submit" class="btn btn-danger" value="Store Details"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    </body>
+</html>
