@@ -16,7 +16,7 @@ route.post("/store",function(request,response){
        people.push(person);
        fs.writeFile(path.join(__dirname,"../data/data.json"),JSON.stringify(people),function(err){
            if(err)
-              response.send("Unable to store data");
+              response.send("Unable to store data"); //to send text as response
            else
                 response.send("Stored Successfully");
 
@@ -30,6 +30,7 @@ route.post("/store",function(request,response){
               if(err)
                  response.send("No Data Found");
               response.render("people",{programmer:"Vinodh",people:JSON.parse(data)});
+              //to give control to a template engine
         });
 
         

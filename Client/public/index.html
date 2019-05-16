@@ -4,12 +4,33 @@
         <script src="jquery.min.js"></script>
         <script src="popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="prizes.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <h1>My first app</h1>
         <a href="json/people">Show People</a>
+       
+        <div class="alert alert-success">
+           Year :: <input type="text" id="year"><br><br>
+           Category::<select id="category">
+                    <option>economics</option>
+                    <option>peace</option>
+                    <option>physics</option>
+                    <option>chemistry</option>
+           </select><br>
+           <br>
+           <button class="btn btn-primary" id="y">Get by Year</button>
+           <button class="btn btn-primary" id="c">Get by Category</button>
+           <button class="btn btn-primary" id="ync">Get by Year n Category</button>
+
+        </div>
+
+        <div class="alert alert-dark" id="data">
+      
+            
+        </div>
         <form action="json/store" method="post">
         <div class="jumbotron">
             <table>
