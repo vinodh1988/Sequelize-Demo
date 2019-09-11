@@ -1,6 +1,7 @@
 var express=require('express');
 var path=require("path");
 var data=require('./Server/routes/data');
+var postgre=require("./Server/routes/postgre");
 
 app=express();
 bodyParser = require('body-parser');
@@ -17,12 +18,15 @@ app.use(express.static(path.join(__dirname,"node_modules/jquery/dist")));
 app.use(express.static(path.join(__dirname,"node_modules/popper.js/dist")));
 
 //If you send form data, if you have to parse the request body
-app.use(bodyParser.urlencoded());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.set('views', path.join(__dirname, 'Client/public/views'));//setting the path of template files
 app.set('view engine', 'pug'); //configuring view Engine
 
 app.use("/json",data); // redirecting a route to other handler
+app.use("/postgre",postgre);
 
 app.get("/",function(request,response){
     response.send("First Node JS Express APP");

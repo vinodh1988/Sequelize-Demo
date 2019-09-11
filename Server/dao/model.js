@@ -1,3 +1,4 @@
+const Sequelize = require('sequelize');
 var sequelize=require('./connection');
 
 var department=sequelize.define('department',{
